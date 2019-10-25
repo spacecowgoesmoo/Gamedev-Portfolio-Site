@@ -11,13 +11,14 @@
 	--color3: #598392;
     --color4: #124559;
     --color5: #01161e;
+
 }
 
 html { padding-bottom: 100px; }
 
 body {
 	margin: 0;
-	background: var(--color1);
+	background: var(--color3);
 	color: var(--color5);
 	
 	/* Prevents ugly super-bold font in OSX Firefox and Chrome */
@@ -63,6 +64,10 @@ body {
 .cowHeader {
 	padding: 20px;
 	display: flex;
+	position: fixed;
+	background-color: var(--color1);
+	width: calc(100% - 40px);
+	z-index: 500;
 }
 
 .cowHeader div {
@@ -86,8 +91,13 @@ body {
 	display: flex;
 }
 
+.headerPadding {
+	padding-top: 62px;
+}
+
+
 .gameContainerReverse {
-	background: var(--color3);
+	/*background: var(--color3);*/
 	flex-flow: row-reverse;
 }
 
@@ -101,7 +111,7 @@ body {
 }
 
 a:link, a:visited, a:hover, a:active { 
-	color: var(--color4); 
+	color: var(--color5); 
 	text-decoration: none;
 } 
 
@@ -111,7 +121,7 @@ a {
 }
 
 a:hover {
-	border-bottom: 1px solid var(--color4);
+	border-bottom: 1px solid var(--color5);
 }
 
 .gameContainerImage {
@@ -120,6 +130,7 @@ a:hover {
 	background-position: center;
 	background-size: cover;
 	overflow: hidden;
+	z-index: 1;
 }
 
 /* Undoes the text underline since we're also using <a> as <img> */
@@ -128,6 +139,32 @@ a:hover {
 }
 
 
+
+
+
+
+
+
+/* Overcomplicated glassy background images */
+/*.glassyBG:before {
+	content: "";
+	position: absolute;
+	margin: -10px 0 0 -40px;
+	z-index: -1;
+
+	width: 53%;
+	height: 370px;
+	
+    background-size: cover;
+	filter: blur(10px);
+    opacity: 0.4;
+}
+
+.glassyBG--transcend:before { background-image: url(transcend.png); }
+.glassyBG--miniTES:before { background-image: url(miniTES.png); }
+.glassyBG--trace2:before { background-image: url(trace2.png); }
+.glassyBG--gomi:before { background-image: url(gomi.png); }
+.glassyBG--trace:before { background-image: url(trace.png); }*/
 
 
 
