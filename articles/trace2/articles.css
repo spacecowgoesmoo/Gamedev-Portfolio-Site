@@ -46,5 +46,6 @@ img { width: 100%; }
 
 
 @media screen and (min-width: 1300px) {
+	.heroImage { max-height: 400px }
 	#articleTextContent { max-width: 1000px }
 }
