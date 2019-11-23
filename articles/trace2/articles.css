@@ -33,6 +33,11 @@ a, a:visited {
 a:hover { color: var(--color5); }
 img { width: 100%; }
 
+.heroImage {
+	max-height: 225px;
+	object-fit: cover;
+}
+
 #articleTextContent {
 	width: 90%;
 	max-width: 736px;
