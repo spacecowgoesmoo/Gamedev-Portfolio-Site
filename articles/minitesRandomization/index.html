@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Worldbuilding MiniTES through randomization</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="Description" content="Worldbuilding MiniTES through randomization">
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="articles.css">
+	<script src='script.js'></script>
+	<!-- Favicons -->
+		<link rel="apple-touch-icon" sizes="180x180" href="https://www.taylorcalderone.com/Images/Favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="https://www.taylorcalderone.com/Images/Favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="https://www.taylorcalderone.com/Images/Favicons/favicon-16x16.png">
+		<link rel="manifest" href="https://www.taylorcalderone.com/Images/Favicons/site.webmanifest">
+		<link rel="mask-icon" href="https://www.taylorcalderone.com/Images/Favicons/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="https://www.taylorcalderone.com/Images/Favicons/favicon.ico">
+		<meta name="msapplication-TileColor" content="#2b5797">
+		<meta name="msapplication-config" content="https://www.taylorcalderone.com/Images/Favicons/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+	<!-- These two lines polyfill CSS variables in IE -->
+		<script src="https://unpkg.com/css-vars-ponyfill@1"></script>
+		<script>cssVars()</script>
+</head>
+
+
+
+
+
+
+
+
+<img class='heroImage' src='worldMap.png' alt='MiniTES world map'>
+
+<div id='articleTextContent'>
+
+<h2>Worldbuilding MiniTES through randomization</h2>
+
+<p>MiniTES was a text based idle game that I developed in 2013. It was a demake of <i>The Elder Scrolls III: Morrowind</i>, but I knew from the beginning that I wanted to build my own setting rather than borrow the world of Vvardenfell. Although I had done worldbuilding twice before, this was the first game where I intended for it to be a major part of the player's experience and not just a tool for creating content.</p>
+
+
+
+
+
+
+
+
+<h3>Designing a setting</h3>
+
+<p>My plan was to build a setting no one had ever seen before by mixing two genres that don't normally go together. Half of this equation would be <i>Morrowind</i>'s 'continent and cities' model so I needed something else that would provide contrast.</p>
+
+<p>During this time I had been catching up on past Doctor Who seasons and I came across the episode, <i>Midnight</i>. Most of the episode took place indoors, but it also had some beautiful landscape shots and I thought this planet (without all the manmade technology) would be perfect as a creative seed for MiniTES. So that was the first step done: the game would feature a <i>Morrowind</i>-esque civilization that lived on a planet with an environment normally found in sci-fi.</p>
+
+<img src='midnight.jpeg' alt='Doctor Who episode: Midnight, outdoor landscape'>
+
+<h3>Randomization</h3>
+
+<p>To make most of the game content I decided to use curated randomization. This remains one of my favorite creative methods and it came from my experience in producing music. I found that any software synthesizer that has a 'randomize all' button could create interesting, unique, and high quality sounds if I was willing to roll the dice enough times. It's something that took little effort and for me it produced equal, if not better creative results than working with a specific goal in mind. I just had to be flexible enough to be able to run with whatever best results the randomization created.</p>
+
+
+
+
+
+
+
+
+<h3>Building a planet</h3>
+
+<p>The first use of randomization was MiniTES's world map, which was created in the freeware game <i>Dwarf Fortress</i>. <i>Dwarf Fortress</i> is an extremely deep roguelike game and one of its features is a fantasy world generator.</p>
+
+<p>My only criteria for randomization was that I wanted a map that could fit nicely into a text window with the same dimensions as cmd.exe's default size. After about 20 minutes I generated a map where the top half was almost perfect for what I was looking for. From there I converted it to ASCII by hand, making some minor changes along the way. This is what the final version looked like, followed by the original randomized map:</p> 
+
+<img src='worldMap.png' alt='MiniTES world map in Dwarf Fortress'>
+
+<img src='dwarfFortress.png' alt='MiniTES world map in Dwarf Fortress'>
+
+<p>You can download a playable copy of this <i>Dwarf Fortress</i> world at the bottom of this page. Please note that you'll need the 2013 version of the game (DF 0.34.11, also linked below) to run it.</p>
+
+
+
+
+
+
+
+
+<h3>Creating locations</h3>
+
+<p>Next, I found some free online tabletop game randomizers that I could use to build up the details of my game world. Most of MiniTES's location names and descriptions were designed this way, with the remaining few being written manually. I would often change a couple things or merge results to make the randomizer outputs fit better. Here are some examples and details that were included in the final product:</p>
+
+<blockquote><p>Camua: A luminous world of crystalline spires and silver oceans, beneath clouds of flame. The plane is populated by living spells (and ghosts of the past?). The plane is the prison of a powerful warlock (or something else?), bound by chains of magical ice. It is also the location of the ruins of Siruvan, an ancient and forgotten transplanar city. It is also the location of Ardan, a planar trading city filled with magical gates.</p>
+
+<p>Deadmoor Tower: This concentric castle appears deserted, but is inhabited by a poor charcoalmaker named Cyni and his family.</p>
+
+<p>Madras: It is governed by a council of elders, whose bizarre laws and decrees are commonly ignored.</p></blockquote>
+
+
+
+
+
+
+
+
+<h3>Communicating setting to the player</h3>
+
+<p>At this point, my content randomization process had to be put aside for some more difficult work. MiniTES was going to be a game with no graphics, no sound, and minimal text. And I had to somehow communicate all the worldbuilding details to the player within these constraints. This was an especially important task because my goal was to create something completely new; I didn't want to throw in a bunch of goblins/orcs/trolls and rely on common knowledge of Tolkien or D&D.</p>
+
+<p>To accomplish this I wrote most of the ingame text by hand and planted worldbuilding clues everywhere that I could: encounter text, console messages, monster names, equipment, key items, map locations, etc. Even the game's default darkmode color palette had a purpose: MiniTES's planet was supposed to feel like night all the time and this would put the player in the same mental state.</p>
+
+<img src='highlights.png' alt='MiniTES ingame text with worldbuilding words highlighted'>
+
+
+
+
+
+
+
+
+<p>In the end I think this mixed approach worked out well. Complete randomization can have  quality control issues and applying some curation to the results lets you cover up that weakness while retaining most of the benefits. MiniTES is one example of what kind of game can be created this way.</p>
+
+
+
+
+
+
+
+
+<h3>Relevant Links</h3>
+<p><a href='https://www.kongregate.com/games/spacecowgoesmoo/minites' target='_blank' rel='noopener'>MiniTES (Free, HTML5)</a></p>
+<p><a href='https://www.youtube.com/watch?v=oS9ggo_T0Mw' target='_blank' rel='noopener'>Doctor Who - Series 4 Episode 10 trailer</a></p>
+<p><a href='https://www.taylorcalderone.com/Filehosting/MiniTES%20Dwarf%20Fortress%20World%20Map.zip'>Dwarf Fortress - playable MiniTES map (13MB download)</a></p>
+<p><a href='http://www.bay12games.com/dwarves/older_versions.html' target='_blank' rel='noopener'>Dwarf Fortress - old versions archive (DF 0.34.11)</a></p>
+</div>
