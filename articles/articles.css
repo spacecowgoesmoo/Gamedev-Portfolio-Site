@@ -44,7 +44,27 @@ img { width: 100%; }
 	margin: 0 auto;
 }
 
+.center {
+	display: block;
+	margin: 0 auto;
+}
 
+.audioButtonContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 10px;
+}
+
+/* Targets all elements except the first one */
+.audioButtonContainer .audioButton:nth-child(n+2) {
+	margin-left: 10px;
+}
+
+.audioButton {
+	width:35px; 
+	margin-right: 10px;
+}
 
 
 /* Mobile First, then scale up */
