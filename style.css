@@ -95,7 +95,6 @@ body {
 	padding-top: 62px;
 }
 
-
 .gameContainerReverse {
 	/*background: var(--color3);*/
 	flex-flow: row-reverse;
@@ -114,10 +113,14 @@ h3 {
 a, a:visited { 
 	color: var(--color4); 
     transition: all .2s ease-in-out;
-} 
+}
 
 a:hover {
 	color: var(--color5);
+}
+
+.marginTopZero {
+	margin-top: 0px;
 }
 
 .gameContainerImage {
