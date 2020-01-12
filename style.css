@@ -119,10 +119,6 @@ a:hover {
 	color: var(--color5);
 }
 
-.marginTopZero {
-	margin-top: 0px;
-}
-
 .gameContainerImage {
 	width: 60%;
 	max-width: 50%;
@@ -149,6 +145,10 @@ a:hover {
 	background: var(--color1);
 	display: flex;
 	flex-direction: column;
+}
+
+.articleSection ul {
+	margin-top: 0px;
 }
 
 /* Overcomplicated glassy background images */
