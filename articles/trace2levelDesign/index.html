@@ -37,9 +37,9 @@
 
 <h2>Learning from the differences in level design processes between Trace 1 & 2</h2>
 
-<p>In 2013 Bovinedragon Software released our third and final game, Trace 2. It was a sequel to our debut game and we thought there was a lot more we could do with the concept so it deserved a second look. My role in development was 'everything except programming', and this article will discuss some of the work I did in level design.</p>
+<p>In 2013 Bovinedragon Software released our third and final game, Trace 2. It was a sequel to our debut game and we thought there was a lot more we could do with the concept so it deserved a second look. My role in development was 'everything except programming', and this article will cover some of the work I did in level design.</p>
 
-<p>This is an effort to capture my most valuable takeaway from developing Trace 2, which had to do with differences in level design between the two games in the series and what the results were. Hopefully it also serves as an interesting look into what went on behind the scenes. Although both games share the same idea with different gimmicks (or lack thereof), the approaches to level design were very different. Trace 2's level design was a concentrated team effort that took months of work, meetings, decisions, and involved carefully crafted rules, metrics, and quality control. Trace 1's level design was more similar to a gamejam. Everything was done on the fly in a few days with minimal iteration and only our life experience in gaming to guide our decisions. The results of this were interesting and showed that meticulous planning can result in diminishing returns.</p>
+<p>This is an effort to capture my most valuable takeaway from developing Trace 2, which had to do with differences in level design between the two games in the series and what the results were. Hopefully it also serves as an interesting look into what went on behind the scenes. Although both games share the same idea with different mechanics, the approaches to level design were very different. Trace 2's level design was a concentrated team effort that took months of work, meetings, decisions, and involved carefully crafted rules, metrics, and quality control. Trace 1's level design was more similar to a gamejam. Everything was done on the fly in a few days with minimal iteration and only our life experience in gaming to guide our decisions. The results of this were interesting and showed that meticulous planning can result in diminishing returns.</p>
 
 
 
@@ -54,7 +54,7 @@
 
 <p>First, let's look at the level design process for Trace 2 and go through its rules from the most basic standpoint. These rules were standalone; you didn't need to check any content outside the level to figure out if it passed or not.</p>
 
-<p>Most of what made Trace 2 levels non-linear puzzles came from rule #1: every level must have at least two intended paths, with one being simple and another being more difficult but faster. To further increase the skill ceiling, designing around speedrun movement exploits was allowed on the difficult paths.</p>
+<p>Most of what made Trace 2 levels non-linear puzzles came from rule #1: every level must have at least two intended paths, with one being simple and another being more difficult but faster. To further increase the skill ceiling, designing around speedrun movement exploits was allowed on the more difficult paths.</p>
 
 <p>Next we had some QoL (quality of life) rules. Levels could not require overly precise drawing, fast switching between drawing and player movement, or use of the 'respawn at start' button. These also ensured that the level design was better by ruling out potentially unintuitive design choices.</p>
 
@@ -77,7 +77,7 @@
 
 <p>In addition to all the basic gameplay rules we had to make the levels compatible with multiple screen sizes. The iPhone 5S was the newest device at the time and we also wanted to support older devices back to the 3GS, plus iPads. Usually this is can be solved by respacing the UI per-device but Trace 2 was a game where level design is a direct function of screen size. We needed a solution that didn't involve creating three different versions of every level.</p>
 
-<p>There were three aspect ratios to deal with: the 5/5S had extra pixels on the X axis, the iPads had extra pixels on the Y axis, and the 3GS/4/4S had neither of those. To keep everything on one version we decided to make the 3GS the 'base' aspect ratio and place filler objects in the extra margins on the other devices. These objects couldn't affect gameplay whatsoever and the level also had to look 'correct' without the filler objects for the 3GS version. After marking boundaries for these extra spaces in our level editor, all we had to do was keep these constraints in mind while building levels and no further effort was needed.</p>
+<p>There were three aspect ratios to deal with: the 5/5S had extra pixels on the X axis, the iPads had extra pixels on the Y axis, and the 3GS/4/4S had neither of those. To keep everything on one version we decided to make the 3GS the 'base' aspect ratio and place filler objects in the margins on the other devices. These objects couldn't affect gameplay whatsoever and the level also had to look 'correct' without the filler objects for the 3GS version. After marking some extra space for these margins in our level editor, all we had to do was keep these constraints in mind while building levels and no further effort was needed.</p>
 
 
 
@@ -100,7 +100,7 @@
 
 <p>Each day I would work on creating three 'level packs'. A level pack consisted of five potential levels for one world, drawn freehand into GIMP through a tablet. The priority here was level structure; terrain and sprite details were all abstracted into stick figure quality so that we could get our ideas down as fast as possible.</p>
 
-<p>Near the end of the day our team met up for around five minutes to discuss the new level packs. We rejected any levels that broke the rules, didn't fit the current needs of our world grid, or just didn't look 'good' enough. Usually we'd decide to keep 2-3 levels per pack which I'd then copy-paste into our grid in their stick figure state. This repeated week after week until we had all 160 levels (8 sets of 20) planned out.</p>
+<p>Near the end of the day our team met up for around five minutes to discuss the new level packs. We rejected any levels that broke the rules, didn't fit the current needs of our world grid, or just didn't seem good enough. Usually we'd decide to keep 2-3 levels per pack which I'd then copy-paste into our grid in their stick figure state. This repeated week after week until we had all 160 levels (8 sets of 20) planned out.</p>
 
 <p>As time went on I began designing the level packs more intentionally to fit the blank spaces on the world grid that remained. The goals would be something like: 'Today I'm going to design something for this world's second tutorial, three generic actiony levels, and one puzzly exception level'.</p>
 
@@ -121,11 +121,11 @@
 
 <p>Now that we've gone through all of that, let's look at the process for Trace 1. And it really was just a process; there were no rules, metrics, guidelines, or any pre-planning beyond the six world themes we had decided on. Due to the simpler nature of the game engine everything from art to enemy movements to beta testing could be done within our custom editor. Unlike our later games, the level design workload on Trace 1 was split up 50/50 between myself and our engineer so this recollection is only from my half.</p>
 
-<p>First I would open up the editor and create a blank file for level #1 of a world. After planning for a few minutes, I began drawing the levels' terrain and enemies by hand using a mouse. The enemies were given hitboxes, paths, and movement speeds, and the player avatar was assigned a starting position. Then I'd hit the 'Play' button and playtest it using mouse and keyboard. After making sure everything worked as intended I'd save the file and create a new one for level #2. And that's it. On an average day I was able to build an entire 20 level world in one six hour sitting, from idea creation to shippable code in one pass.</p>
+<p>First I would open up the editor and create a blank file for level #1 of a world. After planning for a few minutes, I began drawing the levels' terrain and enemies by hand using a mouse. The enemies were given hitboxes, paths, and movement speeds, and the player avatar was assigned a starting position. Then I'd hit the 'Play' button and playtest it with mouse and keyboard. After making sure everything worked as intended I'd save the file and create a new one for level #2. And that's it. On an average day I was able to build an entire 20 level world in one six hour sitting, from idea creation to shippable code in one pass.</p>
 
-<p>Very few levels were changed after being made. World 6 had a giant buzzsaw that moved too fast and the handful of levels with painted backgrounds needed manual code optimization to reduce lag, but those are the only bugs I can remember at this point.</p>
+<p>Very few levels were changed after being made. Level 6-13 had a giant buzzsaw that moved too fast to avoid and the handful of levels with painted backgrounds needed manual code optimization to reduce lag, but those are the only bugs I can remember at this point.</p>
 
-<p>As an interesting side note, World 6 was given extra care because it was the big finale and I wanted it to be the highlight of the game. I made a rough plan of the terrain layout on paper before getting started. Although it had a higher level of ingame detail and an even more detailed ending, it still only took two working sessions to produce all 20 levels.</p>
+<p>As an interesting side note, World 6 was given extra care because it was the big finale and I wanted it to be the highlight of the game. I made a rough plan of the terrain layout on paper before getting started. Although it had a higher standard of ingame detail and an even more detailed ending, it still only took two working sessions to produce all 20 levels.</p>
 
 
 
