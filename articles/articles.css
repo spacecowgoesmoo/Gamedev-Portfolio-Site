@@ -49,6 +49,10 @@ img { width: 100%; }
 	margin: 0 auto;
 }
 
+.width400 {
+	max-width: 400px;
+}
+
 .audioButtonContainer {
 	display: flex;
 	align-items: center;
