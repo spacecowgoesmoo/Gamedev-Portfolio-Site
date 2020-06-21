@@ -54,7 +54,7 @@ img { width: 100%; }
 	flex-wrap: wrap;
 }
 
-.imageGridChild {
+.imageGridContainer img {
 	max-width: 49%;
 	margin: 0.5% ;
 }
