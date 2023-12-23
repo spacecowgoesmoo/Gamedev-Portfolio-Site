@@ -1,6 +1,6 @@
 :root {
     font-family: 'Open Sans', sans-serif;
-	font-size: 18px;
+	font-size: 14px;
 
     /* 1 is lightest, 5 is darkest */
     --color1: rgb(148, 163, 184);
@@ -10,21 +10,17 @@
     --bgColor: rgb(15 23 42);
 }
 
-html {
-	background: var(--bgColor);
-}
-
 body {
-	margin: 0 100px 100px 100px;
+	background: var(--bgColor);
 	color: var(--color1);
-	font-size: 14px;
+	margin: 0 100px 100px 100px;
 
 	/* Prevents ugly super-bold font in OSX Firefox and Chrome */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
-a {
+a, a:visited {
 	color: var(--color2);
 	text-decoration: none;
 }
