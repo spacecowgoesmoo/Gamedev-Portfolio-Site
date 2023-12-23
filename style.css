@@ -2,9 +2,6 @@
     font-family: sans-serif;
 	font-size: 18px;
 
-	--offWhite: #F9F9F9;
-    --offBlack: #202020;
-
     /* 1 is lightest, 5 is darkest */
     --color1: rgb(148, 163, 184);
     --color2: rgb(226, 232, 240);
@@ -53,11 +50,7 @@ a:hover {
 
 
 .header {
-	line-height: 26px;
-	position: fixed;
-	background: slategray;
-	width: 100%;
-	padding: 10px 40px;
+	padding: 40px;
 }
 
 .spacer {
@@ -84,11 +77,11 @@ a:hover {
 	width: 50%;
 }
 
-.gameContainer a {
-	display: contents;
-}
-
 .gameContainer a img {
 	width: 40%;
 	border-radius: 5px;
+}
+
+.imageLink {
+	display: contents;
 }
