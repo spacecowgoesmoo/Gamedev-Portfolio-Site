@@ -14,14 +14,6 @@ html {
 	background: var(--bgColor);
 }
 
-html:after {
-	background: radial-gradient(600px at 256px 420px, rgba(29, 78, 216, 0.15), transparent 80%);
-	min-height: 100vh;
-	width: 100vw;
-	content: '';
-	position: fixed;
-}
-
 body {
 	margin: 0 100px 100px 100px;
 	color: var(--color1);
@@ -95,17 +87,25 @@ a:hover {
 @media screen and (max-width: 960px) {		/* ======= iPad portrait, plus a lot ======= */
 	body {
 		margin: 0 50px 100px 50px;
+	}
+	.header {
 		text-align: center;
 	}
 	.gameContainer {
 		flex-direction: column;
 		align-items: center;
+		padding-top: 60px;
 	}
 	.gameContainerText {
 		margin: 0;
 	}
 	.gameContainerText, .gameContainer a img {
 		width: 100%;
+		max-width: 600px;
+	}
+	.articleSection {
+		margin: 0 auto;
+		width: fit-content;
 	}
 }
 
