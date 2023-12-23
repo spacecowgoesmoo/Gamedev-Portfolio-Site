@@ -1,14 +1,17 @@
 :root {
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
 	font-size: 18px;
 
     /* 1 is lightest, 5 is darkest */
     --color1: rgb(148, 163, 184);
     --color2: rgb(226, 232, 240);
+
+	/* Dark blue */
+    --bgColor: rgb(15 23 42);
 }
 
 html {
-	background: rgb(15 23 42);	/* Dark blue*/
+	background: var(--bgColor);
 }
 
 html:after {
@@ -20,17 +23,13 @@ html:after {
 }
 
 body {
-	margin: 0;
+	margin: 0 100px 100px 100px;
 	color: var(--color1);
 	font-size: 14px;
 
 	/* Prevents ugly super-bold font in OSX Firefox and Chrome */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}
-
-.pageContent {
-	margin: 0 100px 100px 100px;
 }
 
 a {
@@ -50,7 +49,7 @@ a:hover {
 
 
 .header {
-	padding: 40px;
+	padding: 40px 0;
 }
 
 .spacer {
@@ -65,7 +64,6 @@ a:hover {
 .gameContainer {
 	width: 100%;
 	display: flex;
-	justify-content: space-around;
 	padding-top: 40px;
 }
 
@@ -75,6 +73,7 @@ a:hover {
 
 .gameContainerText {
 	width: 50%;
+	margin-left: 40px;
 }
 
 .gameContainer a img {
