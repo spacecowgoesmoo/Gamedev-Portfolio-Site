@@ -23,10 +23,9 @@ html:after {
 }
 
 body {
-	margin: 20px 100px 0 100px;
+	margin: 0 100px;
 	color: var(--color1);
 	font-size: 14px;
-	line-height: 26px;
 
 	/* Prevents ugly super-bold font in OSX Firefox and Chrome */
 	-webkit-font-smoothing: antialiased;
@@ -40,4 +39,43 @@ a {
 
 a:hover {
 	text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+.header {
+	line-height: 26px;
+	position: fixed;
+}
+
+
+
+
+
+
+
+
+.gameContainer {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 40px;
+}
+
+.gameContainerText {
+	width: 50%;
+}
+
+.gameContainer a {
+	display: contents;
+}
+
+.gameContainer a img {
+	width: 40%;
+	border-radius: 5px;
 }
