@@ -23,13 +23,17 @@ html:after {
 }
 
 body {
-	margin: 0 100px;
+	margin: 0;
 	color: var(--color1);
 	font-size: 14px;
 
 	/* Prevents ugly super-bold font in OSX Firefox and Chrome */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+.pageContent {
+	margin: 0 100px 100px 100px;
 }
 
 a {
@@ -51,9 +55,14 @@ a:hover {
 .header {
 	line-height: 26px;
 	position: fixed;
+	background: slategray;
+	width: 100%;
+	padding: 10px 40px;
 }
 
-
+.spacer {
+	margin-top: 100px;
+}
 
 
 
@@ -64,7 +73,11 @@ a:hover {
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
-	margin-top: 40px;
+	padding-top: 40px;
+}
+
+.gameContainer:first-child {
+	padding-top: 110px;
 }
 
 .gameContainerText {
