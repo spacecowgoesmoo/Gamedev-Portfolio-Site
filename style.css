@@ -1,136 +1,29 @@
 :root {
-    font-family: 'Verdana', sans-serif;
-	font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
 
-	--offWhite: #F9F9F9;
-    --offBlack: #202020;
-
-    /* 1 is lightest, 5 is darkest */
-    --color1: #eff6e0;
-    --color2: #aec3b0;
-	--color3: #598392;
-    --color4: #124559;
-    --color5: #01161e;
-
+    --bgColor: rgb(15 23 42);
+    --normalText: rgb(148, 163, 184);
+    --linkText: rgb(226, 232, 240);
 }
 
-html { padding-bottom: 100px; }
-
 body {
-	margin: 0;
-	background: var(--color3);
-	color: var(--color5);
-	
+	background: var(--bgColor);
+	color: var(--normalText);
+	margin: 0 100px 100px 100px;
+
 	/* Prevents ugly super-bold font in OSX Firefox and Chrome */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	
-	cursor: default;
-	
-	/*-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;*/
 }
 
-
-
-
-
-
-
-
-/***************************************
-			TEMPLATE STUFF
-***************************************/
-/* Click simulation */
-.clickable:hover { cursor: pointer; }
-.clickable:active { opacity: 0.8; }
-
-/* Targets Chrome and Safari. Fixes misaligned centering of the last thing on the page */
-.centerFix:not(*:root) { margin-right: 5px; }
-
-
-
-
-
-
-
-
-/***************************************
-				NEW STUFF
-***************************************/
-
-.cowHeader {
-	padding: 20px;
-	display: flex;
-	position: fixed;
-	background-color: var(--color1);
-	width: calc(100% - 40px);
-	z-index: 500;
-}
-
-.cowHeader div {
-	width: 50%;
-}
-
-.headerRight {
-	text-align: right;
-}
-
-
-
-
-
-
-
-.gameContainer, .gameContainerReverse {
-	width: 100%;
-	height: 500px;
-	background: var(--color2);
-	display: flex;
-}
-
-.headerPadding {
-	padding-top: 62px;
-}
-
-.gameContainerReverse {
-	/*background: var(--color3);*/
-	flex-flow: row-reverse;
-}
-
-.gameContainerText {
-	width: calc(50% - 40px);	/* Basic 50% works fine but not in IE11 */
-	padding: 0 20px;
-}
-
-h3 {
-	font-size: 1.4em;
-	font-weight: 400;
-}
-
-a, a:visited { 
-	color: var(--color4); 
-    transition: all .2s ease-in-out;
+a, a:visited {
+	color: var(--linkText);
+	text-decoration: none;
 }
 
 a:hover {
-	color: var(--color5);
-}
-
-.gameContainerImage {
-	width: 60%;
-	max-width: 50%;
-	background-position: center;
-	background-size: cover;
-	overflow: hidden;
-	z-index: 1;
-}
-
-/* Undoes the text underline since we're also using <a> as <img> */
-.gameContainerImage, .gameContainerImage:hover {
-	border-bottom: none;
+	text-decoration: underline;
 }
 
 
@@ -140,37 +33,42 @@ a:hover {
 
 
 
-.articleSection {
-	padding: 0 20px 20px 20px;
-	background: var(--color1);
+.header {
+	padding: 40px 0;
+}
+
+.spacer {
+	margin-top: 100px;
+}
+
+
+
+
+
+
+.gameContainer {
+	width: 100%;
 	display: flex;
-	flex-direction: column;
+	padding-top: 40px;
 }
 
-.articleSection ul {
-	margin-top: 0px;
+.gameContainer:first-child {
+	padding-top: 110px;
 }
 
-/* Overcomplicated glassy background images */
-/*.glassyBG:before {
-	content: "";
-	position: absolute;
-	margin: -10px 0 0 -40px;
-	z-index: -1;
-
-	width: 53%;
-	height: 370px;
-	
-    background-size: cover;
-	filter: blur(10px);
-    opacity: 0.4;
+.gameContainerText {
+	width: 50%;
+	margin-left: 40px;
 }
 
-.glassyBG--transcend:before { background-image: url(transcend.png); }
-.glassyBG--miniTES:before { background-image: url(miniTES.png); }
-.glassyBG--trace2:before { background-image: url(trace2.png); }
-.glassyBG--gomi:before { background-image: url(gomi.png); }
-.glassyBG--trace:before { background-image: url(trace.png); }*/
+.gameContainer a img {
+	width: 40%;
+	border-radius: 5px;
+}
+
+.imageLink {
+	display: contents;
+}
 
 
 
@@ -179,40 +77,33 @@ a:hover {
 
 
 
-/* Responsive Design */
-@media screen and (max-width: 1500px) {
-	.gameContainer, .gameContainerReverse {
-		height: 350px;
+@media screen and (max-width: 960px) {		/* ======= iPad portrait, plus a lot ======= */
+	body {
+		margin: 0 50px 100px 50px;
 	}
-}
-
-@media screen and (max-width: 900px) {
-	.cowHeader {
-		flex-direction: column;
-	}
-
-	.cowHeader div {
-		width: 100%;
-	}
-
-	.headerLeft, .headerRight {
+	.header {
 		text-align: center;
-		padding: 5px 0;
 	}
-
-	.gameContainer, .gameContainerReverse {
-		height: auto;
-		flex-flow: column;
+	.gameContainer {
+		flex-direction: column;
+		align-items: center;
+		padding-top: 60px;
 	}
-	
-	.gameContainerImage {
-		height: 350px;
-		width: 100%;
-		max-width: none;
-	}
-	
 	.gameContainerText {
-		width: 94%;
-		padding: 0 3% 100px 3%;
+		margin: 0;
+	}
+	.gameContainerText, .gameContainer a img {
+		width: 100%;
+		max-width: 600px;
+	}
+	.articleSection {
+		margin: 0 auto;
+		width: fit-content;
+	}
+}
+
+@media screen and (max-width: 480px) {		/* ======= iPhone+, plus a lot ======= */
+	body {
+		margin: 0 20px 100px 20px;
 	}
 }
