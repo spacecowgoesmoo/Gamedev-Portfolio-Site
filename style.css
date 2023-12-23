@@ -84,3 +84,33 @@ a:hover {
 .imageLink {
 	display: contents;
 }
+
+
+
+
+
+
+
+
+@media screen and (max-width: 960px) {		/* ======= iPad portrait, plus a lot ======= */
+	body {
+		margin: 0 50px 100px 50px;
+		text-align: center;
+	}
+	.gameContainer {
+		flex-direction: column;
+		align-items: center;
+	}
+	.gameContainerText {
+		margin: 0;
+	}
+	.gameContainerText, .gameContainer a img {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 480px) {		/* ======= iPhone+, plus a lot ======= */
+	body {
+		margin: 0 20px 100px 20px;
+	}
+}
