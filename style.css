@@ -2,17 +2,14 @@
     font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 
-    /* 1 is lightest, 5 is darkest */
-    --color1: rgb(148, 163, 184);
-    --color2: rgb(226, 232, 240);
-
-	/* Dark blue */
     --bgColor: rgb(15 23 42);
+    --normalText: rgb(148, 163, 184);
+    --linkText: rgb(226, 232, 240);
 }
 
 body {
 	background: var(--bgColor);
-	color: var(--color1);
+	color: var(--normalText);
 	margin: 0 100px 100px 100px;
 
 	/* Prevents ugly super-bold font in OSX Firefox and Chrome */
@@ -21,7 +18,7 @@ body {
 }
 
 a, a:visited {
-	color: var(--color2);
+	color: var(--linkText);
 	text-decoration: none;
 }
 

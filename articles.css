@@ -2,12 +2,9 @@
     font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 
-    /* 1 is lightest, 5 is darkest */
-    --color1: rgb(148, 163, 184);
-    --color2: rgb(226, 232, 240);
-
-	/* Dark blue */
-    --bgColor: rgb(15 23 42);
+    --bgColor: #aec3b0;
+    --normalText: #01161e;
+    --linkText: #124559;
 }
 
 body {
@@ -15,7 +12,7 @@ body {
 	line-height: 29px;
 	margin: 0;
 	background: var(--bgColor);
-	color: var(--color1);
+	color: var(--normalText);
 
 	/* Prevents ugly super-bold font in OSX Firefox and Chrome */
 	-webkit-font-smoothing: antialiased;
@@ -23,7 +20,7 @@ body {
 }
 
 a, a:visited {
-	color: var(--color2);
+	color: var(--linkText);
 	text-decoration: none;
 }
 
