@@ -37,6 +37,10 @@ a:hover {
 	padding: 40px 0;
 }
 
+.header a h2 {
+	display: inline;
+}
+
 .spacer {
 	margin-top: 100px;
 }
