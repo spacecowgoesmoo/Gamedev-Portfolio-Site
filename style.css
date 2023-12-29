@@ -2,9 +2,9 @@
     font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 
-    --bgColor: rgb(15 23 42);
-    --normalText: rgb(148, 163, 184);
-    --linkText: rgb(226, 232, 240);
+    --bgColor: rgb(248, 248, 248);
+    --normalText: rgb(68, 68, 68);
+    --linkText: rgb(68, 68, 255);
 }
 
 body {
